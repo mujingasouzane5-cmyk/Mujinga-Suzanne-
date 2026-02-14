@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription Étudiants</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- En-tête avec navigation -->
+    <header>
+        <div class="logo">UNIVERSITE PEDAGOGIQUE DE KANANGA <br><br> (UPKAN)</div>
+        <nav>
+            <ul>
+                <li><a href="#form">Inscription</a></li>
+                <li><a href="#list">Liste des étudiants</a></li>
+                <li><a href="#about">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container" id="form">
+        <h1>Formulaire d'inscription en ligne</h1>
+        <form id="registrationForm">
+            <label>Nom complet :</label>
+            <input type="text" id="fullname" required>
+
+            <label>Sexe :</label>
+            <select id="gender" required>
+                <option value="">--Choisir--</option>
+                <option value="Masculin">Masculin</option>
+                <option value="Féminin">Féminin</option>
+            </select>
+
+            <label>Faculté :</label>
+            <input type="text" id="faculty" required>
+
+            <label>Département :</label>
+            <input type="text" id="department" required>
+
+            <label>Promotion :</label>
+            <input type="text" id="promotion" required>
+
+            <button type="submit">S'inscrire</button>
+        </form>
+    </div>
+
+    <div class="list-container" id="list">
+        <h2>Liste des étudiants inscrits</h2>
+        <input type="text" id="filterInput" placeholder="Filtrer par nom, faculté...">
+
+        <div class="table-wrapper">
+            <table id="studentTable">
+                <thead>
+                    <tr>
+                        <th>Nom complet</th>
+                        <th>Sexe</th>
+                        <th>Faculté</th>
+                        <th>Département</th>
+                        <th>Promotion</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="about" id="about">
+        <h2>À propos</h2>
+        <p>Cette application simple permet d'inscrire des étudiants en ligne et de consulter la liste des inscrits. Elle est conçue pour être hébergée sur GitHub Pages et accessible depuis n'importe quelle machine.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
